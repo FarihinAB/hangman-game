@@ -1,0 +1,96 @@
+body{
+    color: #fff;
+}
+body #title{
+    font-family: 'Amatic SC', cursive;
+    font-size: 64px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#blur.active{
+    filter: blur(20px);
+    pointer-events: none;
+    user-select: none;
+}
+
+#popup{
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    padding: 50px;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, .30);
+    background: #fff;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+    color: black;
+}
+
+#popup.active{
+    top: 50%;
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+}
+
+#keyboard{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#question{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+#wordSpotlight{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 36px;
+}
+
+#guess{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+}
+
+.guesses{
+    text-align: right;
+    margin-bottom: 15px;
+}
+
+#resetBtn{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#hangmanPic{
+    z-index: 1000;
+}
+
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -100;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+.bg-icon .mutebtn, .bg-icon .how{
+    color: #fff;
+    font-size: 30px;
+}
+
+@media(max-width: 600px){
+    #popup{
+        width: 80%;
+    }
+}

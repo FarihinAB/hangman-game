@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+  integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+  crossorigin="anonymous"/>
+  <title>Hangman</title>
+</head>
+<body>
+<div class="container" id="blur">
+  <h1 class="text-center" id="title">Hangman</h1>
+  <div class="guesses" id="guess">Wrong Guesses: <span id='mistakes'>0</span> of <span id='maxWrong'></span></div>
+    <div class="text-center">
+    <img class="" id='hangmanPic' src="images/0.png">
+    <p id="question">Guess the Animal:</p>
+    <p id="wordSpotlight">The word to be guessed goes here</p>
+    <div id="keyboard"></div>
+    <button class="btn btn-danger" id="resetBtn" onClick="reset()">Reset</button>
+  </div>  
+</div>
+<video autoplay muted loop id="myVideo">
+  <source src="videos/forest.mp4" type="video/mp4">
+</video>
+<div class="bg-icon">
+  <audio id="music" src="audios/music.mp3" autoplay loop></audio>
+  <button class='btn how' onclick="toggle()"><i class="fas fa-question"></i></button>
+  <button class="btn mutebtn"><i class="fas fa-volume-mute"></i></button>
+</div>
+<div class="text-center" id="popup">
+  <h2> TRY TO GUESS THE SECRET WORD ONE LETTER AT A TIME!
+    IF YOU GUESS AN INCORRECT LETTER, YOUR HANGMAN WILL LOSE. TO WIN, SPELL
+    THE WORD BEFORE YOU RUNS OUT OF GUESSES!
+  </h2>
+  <a href="#"></a><button class="btn btn-danger mt-3" id="close" onclick="toggle()">CLOSE</button></a>
+</div>
+
+<script src='js/hangman.js'></script>
+</body>
+</html>
